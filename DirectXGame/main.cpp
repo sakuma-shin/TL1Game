@@ -36,8 +36,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	audio = Audio::GetInstance();
 	audio->Initialize();
 
-	gameScene = new GameScene();
-	gameScene->Initialize();
+	
 
 	// テクスチャマネージャの初期化
 	TextureManager::GetInstance()->Initialize(dxCommon->GetDevice());
@@ -55,6 +54,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 	primitiveDrawer = PrimitiveDrawer::GetInstance();
 	primitiveDrawer->Initialize();
+
+	gameScene = new GameScene();
+	gameScene->Initialize();
 #pragma endregion
 
 	// メインループ

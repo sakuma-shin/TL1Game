@@ -116,7 +116,7 @@ void GameScene::Initialize() {
 
 		//未読み込みの場合、読み込む
 		if (it == models.end()) {
-			Model* model = Model::CreateFromOBJ(objectData.fileName); 
+			Model* model = Model::CreateFromOBJ(objectData.fileName);  
 			models[objectData.fileName] = model;
 		}
 
@@ -171,6 +171,7 @@ void GameScene::Draw() {
 
 		i++;
 	}
+
 
 	Model::PostDraw();
 
