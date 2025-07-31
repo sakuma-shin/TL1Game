@@ -2,28 +2,6 @@
     "name": "scene",
     "objects": [
         {
-            "type": "MESH",
-            "name": "Cube",
-            "transform": {
-                "translation": [
-                    -9.57275104522705,
-                    0.0,
-                    5.463511943817139
-                ],
-                "rotation": [
-                    0.0,
-                    -0.0,
-                    0.0
-                ],
-                "scaling": [
-                    1.0,
-                    1.0,
-                    1.0
-                ]
-            },
-            "file_name": "cube"
-        },
-        {
             "type": "LIGHT",
             "name": "Light",
             "transform": {
@@ -66,48 +44,25 @@
             }
         },
         {
-            "type": "MESH",
-            "name": "ICO球",
+            "type": "ARMATURE",
+            "name": "アーマチュア",
             "transform": {
                 "translation": [
-                    0.0,
-                    -0.7009453773498535,
-                    -3.0761170387268066
+                    -0.11213898658752441,
+                    0.030312728136777878,
+                    2.589508533477783
                 ],
                 "rotation": [
                     0.0,
                     -0.0,
-                    0.0
+                    178.45892333984375
                 ],
                 "scaling": [
                     1.0,
                     1.0,
                     1.0
                 ]
-            },
-            "file_name": "axis"
-        },
-        {
-            "type": "MESH",
-            "name": "ICO球.001",
-            "transform": {
-                "translation": [
-                    -12.416324615478516,
-                    11.363614082336426,
-                    3.3289709091186523
-                ],
-                "rotation": [
-                    0.0,
-                    -0.0,
-                    0.0
-                ],
-                "scaling": [
-                    1.0,
-                    1.0,
-                    1.0
-                ]
-            },
-            "file_name": "axis"
+            }
         }
     ]
 }

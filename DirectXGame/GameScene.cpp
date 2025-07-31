@@ -67,17 +67,15 @@ void GameScene::Initialize() {
 
 			objectData.translation.x = (float)transform["translation"][1];
 			objectData.translation.y = (float)transform["translation"][2];
-			objectData.translation.z = (float)-transform["translation"][0];
+			objectData.translation.z = (float)transform["translation"][0];
 
-			objectData.rotation.x = (float)-transform["rotation"][1];
-			objectData.rotation.y = (float)-transform["rotation"][2];
-			objectData.rotation.z = (float)transform["rotation"][0];
+			objectData.rotation.x = -(float)transform["rotation"][1];
+			objectData.rotation.y = -(float)transform["rotation"][2];
+			objectData.rotation.z = -(float)transform["rotation"][0];
 
 			objectData.scaling.x = (float)transform["scaling"][1];
 			objectData.scaling.y = (float)transform["scaling"][2];
 			objectData.scaling.z = (float)transform["scaling"][0];
-
-			//  TODO: コライダーのパラメータ読み込み
 		}
 
 		// 再帰処理
@@ -95,10 +93,10 @@ void GameScene::Initialize() {
 
 			objectData.translation.x = (float)transform["translation"][1];
 			objectData.translation.y = (float)transform["translation"][2];
-			objectData.translation.z = (float)-transform["translation"][0];
+			objectData.translation.z = -(float)transform["translation"][0];
 
-			objectData.rotation.x = (float)-transform["rotation"][1];
-			objectData.rotation.y = (float)-transform["rotation"][2];
+			objectData.rotation.x = -(float)transform["rotation"][1];
+			objectData.rotation.y = -(float)transform["rotation"][2];
 			objectData.rotation.z = (float)transform["rotation"][0];
 
 			objectData.scaling.x = (float)transform["scaling"][1];
@@ -127,6 +125,9 @@ void GameScene::Initialize() {
 
 		// 3Dオブジェクトを生成
 		WorldTransform* newObject = new WorldTransform();
+
+		
+		newObject->Initialize();
 		// 座標
 		newObject->translation_ = objectData.translation;
 		// 回転角
@@ -134,7 +135,6 @@ void GameScene::Initialize() {
 		// 拡縮
 		newObject->scale_ = objectData.scaling;
 
-		newObject->Initialize();
 
 		// 配列に登録
 		worldTransforms.push_back(newObject);
